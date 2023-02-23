@@ -3,21 +3,21 @@ import React, { useState } from 'react'
 function LearningState() {
   const [count, setCount] = useState(0);
 
-  function clickCountPlus() {
+  function handleIncrementCount() {
     console.log('clicked button +')
     setCount(count + 1)
   }
 
-  function clickCountMinus() {
+  function handleDecrementCount() {
     console.log('clicked button -')
     setCount(count - 1)
   }
 
   return (
     <>
-      <button onClick={clickCountMinus}>-</button>
+      <button onClick={handleDecrementCount}>-</button>
       <span>{count}</span>
-      <button onClick={clickCountPlus}>+</button>
+      <button onClick={handleIncrementCount}>+</button>
     </>
   )
 }
