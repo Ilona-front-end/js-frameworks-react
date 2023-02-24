@@ -1,26 +1,26 @@
 // example 1
-// import './App.css';
+import './App.css';
 
-// // Hesh advised for security to use string on price and not number
-// const products = [
-//   { id: 1, name: 'Laptop', price: '1000' },
-//   { id: 2, name: 'TV', price: '1005' },
-//   { id: 3, name: 'Phone', price: '1300' },
-//   { id: 4, name: 'AI', price: '2000' },
-// ]
+// Hesh advised for security to use string on price and not number
+const products = [
+  { id: 1, name: 'Laptop', price: '1000' },
+  { id: 2, name: 'TV', price: '1005' },
+  { id: 3, name: 'Phone', price: '1300' },
+  { id: 4, name: 'AI', price: '2000' },
+]
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <ul>{products.map((product) => (
-//         <li key={product.id}>{product.name}: {product.price} NOK</li>
-//       ))}
-//       </ul>
-//     </div>
-//   );
-// }
+function App() {
+  return (
+    <div className="App">
+      <ul>{products.map((product) => (
+        <li key={product.id}>{product.name}: {product.price} NOK</li>
+      ))}
+      </ul>
+    </div>
+  );
+}
 
-// export default App;
+export default App;
 
 
 
@@ -54,29 +54,62 @@
 
 
 
-// example 3
-import './App.css';
+// // example 3
+// import './App.css';
+
+// // Hesh advised for security to use string on price and not number
+// const products = [
+//   { id: 1, name: 'Laptop', price: '1000' },
+//   { id: 2, name: 'TV', price: '1005' },
+//   { id: 3, name: 'Phone', price: '1300' },
+//   { id: 4, name: 'AI', price: '2000' },
+// ]
+
+// function App() {
+
+//   const productList = products.map((product) => (
+//     <li key={product.id}>{product.name}: {product.price} NOK</li>
+//   ))
+
+//   return (
+//     <div className="App">
+//       <ul>{productList}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+
+// example 4 - didnt work - check code
+// import './App.css';
 
 // Hesh advised for security to use string on price and not number
-const products = [
-  { id: 1, name: 'Laptop', price: '1000' },
-  { id: 2, name: 'TV', price: '1005' },
-  { id: 3, name: 'Phone', price: '1300' },
-  { id: 4, name: 'AI', price: '2000' },
-]
+// const products = [
+//   { id: 1, name: 'Laptop', price: '1000' },
+//   { id: 2, name: 'TV', price: '1005' },
+//   { id: 3, name: 'Phone', price: '1300' },
+//   { id: 4, name: 'AI', price: '2000' },
+// ]
 
-function App() {
+// function App() {
+//   const productList = products.map(({ name, price, id }, index) => {
+//     if (index >= 2) { // render nothing if more than 2 items
+//       return null
+//     }
+//     return (
+//       <li key={id}>
+//         <span>Name: {name}</span>
+//         <span>Price: {price} NOK</span>
+//       </li>
+//     )
+//   })
+// }
 
-  const productList = products.map((product) => (
-    <li key={product.id}>{product.name}: {product.price} NOK</li>
-  ))
 
-  return (
-    <div className="App">
-      <ul>{productList}
-      </ul>
-    </div>
-  );
-}
-
-export default App;
+// export default App;
