@@ -13,10 +13,10 @@ const StyledInput = styled.input`
     color: ${(props) => props.colour};
   }
 `
-
+// input is parent, StyledInput is a child. It means we get access to input props
 const Input = (props) => {
   return (
-    <StyledInput placeholder={props.placeholder} colour={props.colour}/>
+    <StyledInput placeholder={props.placeholder} colour={props.colour} />
   );
 };
 

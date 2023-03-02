@@ -1,5 +1,6 @@
 import styled from "styled-components";
 // 7 seven creating a BTN
+// secondaryColour is defined in App.js
 const Button = styled.button`
   color: white;
   background-color: ${(props) => props.theme.secondaryColour};
@@ -8,12 +9,15 @@ const Button = styled.button`
   border-radius: 8px;
   border: none;
   margin-bottom: 1rem;
+  &&:hover {
+    background-color: green;
+  }
 `
 
 export default Button;
 
 // extend styles for the Button component another way to have differnt styles
-
+// can not export default DangerButton. So importing we need to use {} like: import Button, {DangerButton} from "./components/form/Button";
 export const DangerButton = styled(Button)`
   background-color: ${(props) => props.theme.dangerColour};
   height: 46px;
