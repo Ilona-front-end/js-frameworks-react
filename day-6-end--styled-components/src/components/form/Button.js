@@ -1,6 +1,7 @@
 import styled from "styled-components";
 // 7 seven creating a BTN
 // secondaryColour is defined in App.js
+// comment 
 const Button = styled.button`
   color: white;
   background-color: ${(props) => props.theme.secondaryColour};
